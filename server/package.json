@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.279.0",
     "express": "^4.18.2",
     "socket.io": "^4.6.0"
   },
@@ -14,7 +15,9 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q transpiled/index.js\""
+    "dev": "export AWS_PROFILE=tennismatcher && concurrently  \"npx tsc --watch\" \"nodemon -q transpiled/index.js\"",
+    "dev2": "npx tsc --watch && nodemon -q transpiled/index.js "
+
   },
   "engines": {
     "npm": ">=8.0.0 <9.0.0",
