@@ -1,0 +1,6 @@
+node_modules
+server/artifact/*
+!/server/artifact/.gitkeep
+
+server/transpiled/*
+!/server/transpiled/.gitkeep
